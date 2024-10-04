@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'current-nav-link': 'linear-gradient(270deg, transparent 0.17%, #2253b2 15%, #fff 50%, #2253b2 85%, transparent)',
+      },
     },
   },
   plugins: [],

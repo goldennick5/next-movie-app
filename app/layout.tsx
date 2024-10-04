@@ -1,12 +1,13 @@
 import "@/styles/globals.css";
+import 'swiper/css';
 
-import { Fira_Sans } from "next/font/google";
-import Header from "@/components/shared/Header";
+import Header from "@/components/partials/Header";
+import { Merriweather } from "next/font/google";
 import type { Metadata } from "next";
 import ReactQueryProvider from "../providers/ReactQueryProvider";
 
-const firaSans = Fira_Sans({
-  weight: ["300", "400", "500", "600", "700"],
+const merriweather = Merriweather({
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className={firaSans.className}>
+        <main className={merriweather.className}>
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </main>
       </body>

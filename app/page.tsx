@@ -1,7 +1,12 @@
-export default function Home() {
+import { FC } from "react";
+import NowPlayingMoviesSwiper from "@/features/movies/components/NowPlayingMoviesSwiper";
+
+const Home: FC = () => {
   return (
-    <div className="text-red">
-      Watch for free
+    <div className="mt-[10px]">
+      <NowPlayingMoviesSwiper />
     </div>
   );
-}
+};
+
+export default Home;
