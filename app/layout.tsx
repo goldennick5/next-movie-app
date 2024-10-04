@@ -1,4 +1,4 @@
-import "@/assets/globals.css";
+import "@/styles/globals.css";
 
 import { Fira_Sans } from "next/font/google";
 import Header from "@/components/shared/Header";
