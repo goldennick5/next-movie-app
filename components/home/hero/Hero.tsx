@@ -9,18 +9,20 @@ const Hero: FC = () => {
   const { data: movies, isLoading, error } = useNowPlayingMovies();
 
   return (
-    <Carousel
-      items={movies?.results || []}
-      renderItem={(movie) => <HeroSlide item={movie} />}
-      autoplay={true}
-      options={{
-        spaceBetween: 20,
-        slidesPerView: 1.75,
-        loop: true,
-        centeredSlides: true,
-      }}
-      navigation
-    />
+    <section>
+      <Carousel
+        items={movies?.results || []}
+        renderItem={(movie) => <HeroSlide item={movie} />}
+        autoplay={true}
+        options={{
+          spaceBetween: 20,
+          slidesPerView: 1.75,
+          loop: true,
+          centeredSlides: true,
+        }}
+        navigation
+      />
+    </section>
   );
 };
 
