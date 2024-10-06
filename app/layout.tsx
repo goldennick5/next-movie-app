@@ -1,16 +1,9 @@
-import "@/styles/globals.css";
+import "@/styles/index.scss"
 import 'swiper/css';
 
-import Header from "@/components/partials/Header";
-import { Merriweather } from "next/font/google";
+import Header from "@/components/partials/header/Header";
 import type { Metadata } from "next";
 import ReactQueryProvider from "../providers/ReactQueryProvider";
-
-const merriweather = Merriweather({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Movie app",
@@ -26,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className={merriweather.className}>
+        <main>
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </main>
       </body>

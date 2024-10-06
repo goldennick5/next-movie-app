@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  
+  .header__logo {
+    margin-right: 40px;
+  }
+  .header__left-part {
+    display: flex;
+    align-items: center;
+  }
+  .header__right-part {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+  }
+}

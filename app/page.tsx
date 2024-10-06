@@ -1,10 +1,11 @@
 import { FC } from "react";
-import NowPlayingMoviesSwiper from "@/features/movies/components/NowPlayingMoviesSwiper";
+import Hero from "@/features/home/ui/hero/Hero";
+import styles from "./page.module.scss";
 
 const Home: FC = () => {
   return (
-    <div className="mt-[10px]">
-      <NowPlayingMoviesSwiper />
+    <div className={styles["home-page-wrapper"]}>
+      <Hero />
     </div>
   );
 };

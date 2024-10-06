@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import clsx from "clsx";
+import styles from "./styles.module.scss";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -11,27 +12,25 @@ const Navbar = () => {
   const currentPathname = usePathname();
 
   return (
-    <ul className="flex h-full items-center gap-[20px]">
+    <ul className={styles['navbar']}>
       {routes.map((href, index) => (
-        <li key={index} className="flex items-center h-full relative group">
+        <li key={index} className={styles["navbar__item"]}>
           <Link
             href={href}
             className={clsx(
-              "h-full text-gray-400 text-[15px] font-bold px-2 flex items-center relative transition-colors duration-300",
-              {
-                "!text-white": currentPathname === href,
-                "hover:text-white": currentPathname !== href,
-              }
+              styles["navbar__link"],
+              currentPathname === href
+                ? styles["navbar__link--active"]
+                : styles["navbar__link--inactive"]
             )}
           >
             {routeNames[index]}
             <span
               className={clsx(
-                "absolute top-[60px] left-1/2 transform -translate-x-1/2 w-0 h-[2px] bg-current-nav-link transition-all duration-300",
-                {
-                  "w-full": currentPathname === href,
-                  "group-hover:w-full": currentPathname !== href,
-                }
+                styles["navbar__underline"],
+                currentPathname === href
+                  ? styles["navbar__underline--active"]
+                  : styles["navbar__underline--inactive"]
               )}
             ></span>
           </Link>

@@ -1,14 +1,18 @@
-import Logo from "@/components/partials/Logo";
-import Navbar from "@/components/partials/Navbar";
+import Logo from "@/components/partials/logo/Logo";
+import Navbar from "@/components/partials/navbar/Navbar";
+import clsx from "clsx";
+import styles from "./styles.module.scss";
 
 const Header = () => {
   return (
-    <header className="w-full h-[80px] flex justify-between items-center px-[100px] bg-transparent">
-      <div className="flex items-center gap-[30px] h-full">
+    <header className={clsx(styles.header, "container")}>
+      <div className={styles["header__left-part"]}>
+        <div className={styles["header__logo"]}>
         <Logo />
+        </div>
         <Navbar />
       </div>
-      <p className="text-white">Search</p>
+      <div className={styles["header__right-part"]}>Search</div>
     </header>
   );
 };

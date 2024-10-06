@@ -1,7 +1,5 @@
-import { INowPlayingMoviesResponse } from "@/features/movies/types";
+import { INowPlayingMoviesResponse } from "@/features/home/types";
 import apiClient from "@/lib/apiClient";
-
-console.log(process.env.NEXT_IMDB_ACCESS_TOKEN);
 
 export const getNowPlayingMovies =
   async (): Promise<INowPlayingMoviesResponse> => {

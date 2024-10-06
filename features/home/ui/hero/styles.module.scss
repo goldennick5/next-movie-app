@@ -1,0 +1,23 @@
+.hero__wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--color-loader);
+  color: var(--color-white);
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: var(--radius);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+  }
+}

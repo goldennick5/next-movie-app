@@ -7,8 +7,8 @@ const Logo = () => {
       <Image
         src="/logo.svg"
         alt="Online streaming platform logo"
-        width="60"
-        height="60"
+        width={61}
+        height={42}
       />
     </Link>
   );
