@@ -1,4 +1,4 @@
-import type { IMovie } from "@/features/home/types";
+import type { IMovie } from "@/features/movies/types";
 import Image from "next/image";
 import Link from "next/link";
 import { MovieRating } from "@/components/shared/movie-rating/MovieRating";
@@ -12,7 +12,7 @@ interface SlideProps {
 }
 
 const HeroSlide = ({ item }: SlideProps) => {
-  const { id, title, backdrop_path, vote_average, genre_ids } = item;
+  const { title, backdrop_path, vote_average, genre_ids } = item;
 
   return (
     <div className={styles.item}>
@@ -21,7 +21,7 @@ const HeroSlide = ({ item }: SlideProps) => {
           {title}
         </Title>
         <div className={styles.bottom}>
-          <MovieRating className={styles.rating}>
+          <MovieRating showState={true} className={styles.rating}>
             {formatVoteAverage(vote_average)}
           </MovieRating>
           <span className={styles.genre}>

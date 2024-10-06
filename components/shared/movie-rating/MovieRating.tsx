@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
+import { useMemo } from "react";
 
 interface IRatingProps extends PropsWithChildren {
   className?: string;
@@ -16,10 +17,6 @@ export const MovieRating = ({
 }: IRatingProps) => {
   const rating = Number(children);
   const isHighRating = rating >= 6;
-
-  const formatVoteAverage = (vote_average: number): number => {
-    return parseFloat(vote_average.toFixed(1));
-  };
 
   return (
     <span

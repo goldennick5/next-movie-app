@@ -3,8 +3,7 @@
 import Carousel from "@/components/shared/carousel/Carousel";
 import { FC } from "react";
 import HeroSlide from "./slide/HeroSlide";
-import styles from "./styles.module.scss";
-import { useNowPlayingMovies } from "@/features/home/hooks/useNowPlayingMovies";
+import { useNowPlayingMovies } from "@/features/movies/hooks/useNowPlayingMovies";
 
 const Hero: FC = () => {
   const { data: movies, isLoading, error } = useNowPlayingMovies();

@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-// import { Icon } from "shared/ui/icon";
+import { Icon } from "@/components/shared/icon/Icon";
 import clsx from "clsx";
 import { forwardRef } from "react";
 import styles from "./styles.module.scss";
@@ -15,7 +15,7 @@ export const CarouselButton = forwardRef<HTMLButtonElement, ICarouselButtonProps
       ref={ref}
       {...props}
     >
-      {/* <Icon name="common/chevron" /> */}
+      <Icon name="common/chevron" />
     </button>
   )
 );

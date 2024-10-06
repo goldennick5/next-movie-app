@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Hero from "@/features/home/ui/hero/Hero";
+import Hero from "@/components/home/hero/Hero";
 import styles from "./page.module.scss";
 
 const Home: FC = () => {

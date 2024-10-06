@@ -1,4 +1,4 @@
-import { INowPlayingMoviesResponse } from "@/features/home/types";
+import { INowPlayingMoviesResponse } from "@/features/movies/types";
 import apiClient from "@/lib/apiClient";
 
 export const getNowPlayingMovies =
