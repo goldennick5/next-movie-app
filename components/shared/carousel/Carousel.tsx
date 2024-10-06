@@ -3,30 +3,30 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { FC, useCallback } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { FC, ReactNode, useCallback } from "react";
+import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
+import { SwiperModule, SwiperOptions } from "swiper/types";
 
 import { CarouselButton } from "@/components/shared/carousel/ui/carousel-button/CarouselButton";
-import { SwiperOptions } from "swiper/types";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { useDomRefWithSetter } from "@/components/shared/carousel/lib/useDomRefWithSetter";
 
-interface ICarouselProps<T> {
-  items: T[];
-  renderItem: (item: T, index: number) => JSX.Element;
+interface ICarouselProps<T> extends SwiperProps {
+  items: T[] | undefined;
+  renderItem: (item: T, idx: number) => ReactNode;
   className?: string;
   slideClassName?: string;
   options?: SwiperOptions;
+  modules?: SwiperModule[];
   navigation?: boolean;
   pagination?: boolean;
   autoplay?: boolean;
   prevBtnClass?: string;
   nextBtnClass?: string;
-  modules?: string[];
 }
 
-const Carousel: FC<ICarouselProps<any>> = ({
+const Carousel = <T, _>({
   items,
   renderItem,
   className,
@@ -39,7 +39,7 @@ const Carousel: FC<ICarouselProps<any>> = ({
   prevBtnClass,
   nextBtnClass,
   ...props
-}) => {
+}: ICarouselProps<T>) => {
   const [nextEl, nextElRef] = useDomRefWithSetter<HTMLButtonElement>();
   const [prevEl, prevElRef] = useDomRefWithSetter<HTMLButtonElement>();
 

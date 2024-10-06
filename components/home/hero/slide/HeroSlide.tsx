@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MovieRating } from "@/components/shared/movie-rating/MovieRating";
 import { Title } from "@/components/shared/title/Title";
 import { formatVoteAverage } from "@/utils/formatVoteAverage";
-import { genres } from "@/lib/config/genres";
+import { genres } from "@/lib/data/genres";
 import styles from "./styles.module.scss";
 
 interface SlideProps {
