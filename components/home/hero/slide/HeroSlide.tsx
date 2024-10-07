@@ -1,3 +1,4 @@
+import { IMAGE_ORIGINAL } from "@/constants/images";
 import type { IMovie } from "@/features/movies/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +40,7 @@ const HeroSlide = ({ item }: SlideProps) => {
         priority
         quality={100}
         sizes="100%"
-        src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+        src={IMAGE_ORIGINAL + backdrop_path}
       />
     </div>
   );

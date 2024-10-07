@@ -51,7 +51,7 @@ const CategoryCarousel = <T, _>({ items, slideClassName, ...props }: any) => {
         />
       ) : (
         <div className={styles.loader}>
-          <Spinner />
+          <Spinner color="white" />
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { INowPlayingMoviesResponse } from "../types";
+import { INowPlayingMoviesResponse } from "@/features/movies/types";
 import { getNowPlayingMovies } from "@/features/movies/api";
 import { useQuery } from "@tanstack/react-query";
 

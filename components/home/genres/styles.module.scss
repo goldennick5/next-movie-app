@@ -2,8 +2,6 @@
   position: relative;
   padding: 20px 0 45px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
 
   &:after,
   &:before {
@@ -57,8 +55,6 @@
 }
 
 .genres-list {
-  overflow: visible;
-
   .genres-list__item {
     width: auto;
     cursor: pointer;

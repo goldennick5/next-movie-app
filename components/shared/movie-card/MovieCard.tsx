@@ -1,3 +1,4 @@
+import { IMAGE_W500 } from "@/constants/images";
 import { IMovie } from "@/features/movies/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,12 +9,12 @@ interface IMovieCardProps {
 }
 
 const MovieCard = (item: IMovieCardProps) => {
-  const { title, poster_path } = item.item;
+  const { id, title, poster_path } = item.item;
   return (
-    <Link className={styles["movie-card"]} href="https://google.com">
+    <Link className={styles["movie-card"]} href={`/movie/${id}`}>
       <div className={styles["movie-card__wrapper"]}>
         <Image
-          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          src={IMAGE_W500 + poster_path}
           alt={title}
           className={styles["movie-card__poster"]}
           fill
@@ -21,6 +22,7 @@ const MovieCard = (item: IMovieCardProps) => {
           sizes="100%"
         />
       </div>
+      <div className={styles["content"]}></div>
     </Link>
   );
 };
