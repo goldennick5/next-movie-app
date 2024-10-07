@@ -6,8 +6,8 @@ import styles from "./styles.module.scss";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const routeNames: string[] = ["Main", "Movies", "Series", "Cartoons"];
-  const routes: string[] = ["/", "/movies", "/series", "/cartoons"];
+  const routeNames: string[] = ["Main", "Movies"];
+  const routes: string[] = ["/", "/movies"];
 
   const currentPathname = usePathname();
 

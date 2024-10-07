@@ -35,9 +35,9 @@ const CategoryTitle = ({ href, children, ...props }: ICategoryTitleProps) => {
   );
 };
 
-const CategoryCarousel = <T, _>({ items, slideClassName, ...props }) => {
+const CategoryCarousel = <T, _>({ items, slideClassName, ...props }: any) => {
   return (
-    <div className={styles["wrapper"]}>
+    <div className={styles.wrapper}>
       {items ? (
         <Carousel
           className={styles.slider}
@@ -50,7 +50,9 @@ const CategoryCarousel = <T, _>({ items, slideClassName, ...props }) => {
           {...props}
         />
       ) : (
-        <Spinner />
+        <div className={styles.loader}>
+          <Spinner />
+        </div>
       )}
     </div>
   );
